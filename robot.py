@@ -13,11 +13,12 @@ class Robot():
         self.left_motor.set_speed(speed)
 
     def reverse(self):
-        self.drive_forward(-1)
+        self.right_motor.reverse()
+        self.left_motor.reverse()
 
     def turn_left(self):
-        self.right_motor.set_speed(1)
         self.left_motor.set_speed(0)
+        self.right_motor.set_speed(1)
 
     def turn_right(self):
         self.right_motor.set_speed(0)
